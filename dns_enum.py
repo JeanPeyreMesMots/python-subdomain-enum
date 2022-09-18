@@ -5,16 +5,17 @@ import os
 
 def main():
     # Parsing arguments
-    parser = argparse.ArgumentParser(add_help=True, description="Tool to enum DNS records")
-    parser.add_argument("--domain", help="specify target server to enumerate", required=True)
+    parser = argparse.ArgumentParser(add_help=True, description="Script to enum DNS records")
+    parser.add_argument("--domain", help="specify target domain to enumerate", required=True)
     parser.add_argument("--wordlist", help="specify wordlist to use", required=True)
-    parser.add_argument("--output", help="specify ouput filename for found subdomains", required=True)
+    parser.add_argument("--output", help="specify output filename for found subdomains", required=True)
     args = parser.parse_args()
     # Put them into variables
     domain = args.domain
     wordlist = args.wordlist
     file_output = args.output
-    print(f"Will enum {domain} domain by using {wordlist}, writing into {file_output}")
+
+    print(f"Will enum {domain} domain by using {wordlist}, writing into {file_output}\n")
 
     # Read wordlist lines
     wordlist = open(wordlist)
