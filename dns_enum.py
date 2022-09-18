@@ -3,14 +3,14 @@ import sys
 import argparse
 import os
 
-# parsing args
+# Parsing arguments
 parser = argparse.ArgumentParser(add_help=True, description="Tool to enum DNS records")
-parser.add_argument("--server", help="specify target server to enumerate", required=True)
+parser.add_argument("--domain", help="specify target server to enumerate", required=True)
 parser.add_argument("--wordlist", help="specify wordlist to use", required=True)
 parser.add_argument("--output", help="specify ouput filename for found subdomains", required=True)
 args = parser.parse_args()
-# list
-domain = args.server
+# Put them into variables
+domain = args.domain
 wordlist = args.wordlist
 file_output = args.output
 print(f"Will enum {domain} domain by using {wordlist}, writing into {file_output}")
