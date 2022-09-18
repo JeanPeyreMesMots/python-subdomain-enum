@@ -1,4 +1,4 @@
-# python-dns-enum
+# simple-python-dns-enum
 A very simple script to enumerate subdomains of a domain using a wordlist, and write them into a file.
 You can find a wordlist anywhere with a simple search on the internet.
 
