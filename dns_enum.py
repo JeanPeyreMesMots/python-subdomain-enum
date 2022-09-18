@@ -26,6 +26,7 @@ sub_found = open(file_output, "w+")
 sub_length = len(subdomains)
 count = 0
 
+# Each words in wordlist
 for subdomain in subdomains:
     url = f"https://{subdomain}.{domain}"
     try:
@@ -34,6 +35,7 @@ for subdomain in subdomains:
         sub_found.write("[+] Subdomain found : " + url + "\n")
         count += 1
         continue
+    # In case of timeout or connection error
     except requests.Timeout:
         print("[-] ", count, "/", sub_length, f"Error: Timeout error encountered when trying {url}")
         pass
