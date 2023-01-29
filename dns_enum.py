@@ -5,7 +5,7 @@ import os
 
 def main():
     # Parsing arguments
-    parser = argparse.ArgumentParser(add_help=True, description="Script to enum DNS records")
+    parser = argparse.ArgumentParser(add_help=True, description="Script to enum subdomains of a DNS domain")
     parser.add_argument("--domain", help="specify target domain to enumerate", required=True)
     parser.add_argument("--wordlist", help="specify wordlist to use", required=True)
     parser.add_argument("--output", help="specify output filename for found subdomains", required=True)
